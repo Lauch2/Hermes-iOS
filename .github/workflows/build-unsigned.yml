@@ -38,6 +38,7 @@ jobs:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGN_IDENTITY="" \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
             -quiet
 
       - name: Find built .app

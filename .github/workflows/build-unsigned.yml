@@ -30,6 +30,7 @@ jobs:
 
       - name: Build for iOS Simulator (unsigned)
         run: |
+          xcrun simctl list devices available
           xcodebuild build \
             -project HermesMobile.xcodeproj \
             -scheme HermesMobile \
@@ -38,7 +39,7 @@ jobs:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGN_IDENTITY="" \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -destination 'generic/platform=iOS Simulator' \
             -quiet
 
       - name: Find built .app

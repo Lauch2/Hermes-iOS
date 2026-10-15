@@ -38,6 +38,7 @@ jobs:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGN_IDENTITY="" \
+            IPHONEOS_DEPLOYMENT_TARGET=18.0 \
             -quiet
 
       - name: Find built .app
